@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, serif;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+footer {
+  background-color: #ffffff;
+  position: relative;
+  bottom: 0;
+  box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+.homepage-wrapper {
+  margin-top: -68px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+
+    .title {
+      font-size: 5rem;
+      color: white;
+      transform: translateZ(-5px) scale(1.5);
+    }
+    .hero-image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transform: translateZ(-10px) scale(2);
+      filter: brightness(75%);
+    }
+  }
+  .description {
+    z-index: 10;
+    .content {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+.artwork-card,
+.artist-card {
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+}
+
+.artwork-wrapper {
+  .artwork-display {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 12% 1fr 10%;
+    height: 100vh;
+    width: 100vw;
+    .background {
+      grid-column: 1 / end;
+      grid-row: 1 / end;
+      z-index: -1;
+      background: #ffffff;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.49) 0%,
+        rgba(231, 229, 228, 1) 91%
+      );
+    }
+    .artwork-container {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      .frame {
+        display: flex;
+        flex-grow: 1;
+      }
+      img {
+        position: relative !important;
+      }
+    }
+  }
+  .artwork-description {
+    margin-top: 100vh;
+    background-color: #ffffff;
+    z-index: 10;
+    .content {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+.artist-wrapper {
+  h1 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .artist-display {
+    display: flex;
+      flex-direction: column-reverse;
+    div {
+      flex: 1;
+    }
+    .frame {
+      width: 100%;
+      max-height: 600px;
+      max-width: 1000px;
+      justify-items: center;
+    }
+  }
+  .content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.padding64x24 {
+  padding: 4rem 1.5rem;
+}
+.py-64 {
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper .description .content {
+    width: 100%;
+  }
+  .artwork-wrapper .artwork-description .content {
+    width: 100%;
+    text-align: left;
+  }
+  .artist-wrapper {
+    .artist-display {
+      .frame {
+        padding: 0 1.5rem;
+      }
+    }
+    .content {
+      width: 100%;
+    }
+  }
+}
