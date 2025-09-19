@@ -19,7 +19,7 @@ export default function Homepage() {
       <section className="description relative padding64x24 w-full bg-white">
         <div className="content">
           <h2>{homepageData.sectionHeader}</h2>
-          <p>{homepageData.sectionText}</p>
+          <p className="text-justify">{homepageData.sectionText}</p>
         </div>
       </section>
     </main>

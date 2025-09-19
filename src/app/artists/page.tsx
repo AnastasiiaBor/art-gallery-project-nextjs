@@ -11,7 +11,7 @@ export default function ArtistsPage() {
       <section className="padding64x24 w-full">
         <div className="content w-full sm:w-1/2">
           <h2>{artistsPageData.artistsHeader}</h2>
-          <p>{artistsPageData.artistsText}</p>
+          <p className="text-justify">{artistsPageData.artistsText}</p>
         </div>
       </section>
       <hr className="w-1/2 mx-auto" />

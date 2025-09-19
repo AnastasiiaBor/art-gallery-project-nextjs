@@ -10,7 +10,7 @@ export default function GalleryPage() {
       <section className="padding64x24 w-full">
         <div className="content w-full sm:w-1/2">
           <h1>{galleryPageData.galleryHeader}</h1>
-          <p>{galleryPageData.galleryText}</p>
+          <p className="text-justify">{galleryPageData.galleryText}</p>
         </div>
       </section>
       <hr className="w-1/2 mx-auto" />

@@ -18,7 +18,7 @@ export default async function ArtistPage({ params }: ArtistProps) {
 
   return (
     <main className="artist-wrapper relative">
-      <div className="padding64x24 text-2xl font-bold">
+      <div className="text-2xl font-bold">
         <h1>{artist.name}</h1>
       </div>
 
@@ -41,7 +41,7 @@ export default async function ArtistPage({ params }: ArtistProps) {
 
       <section className="artist-description padding64x24">
         <div className="content">
-          <p className="text-gray-700">{artist.biography}</p>
+          <p className="text-gray-700 text-justify">{artist.biography}</p>
         </div>
       </section>
     </main>

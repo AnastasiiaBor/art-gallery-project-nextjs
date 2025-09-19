@@ -42,8 +42,8 @@ export default async function ArtworkPage({ params }: ArtistProps) {
       <section className="artwork-description relative padding64x24">
         <div className="content">
           <h1 className="font-bold mb-4">{artwork.title}</h1>
-          <p className="text-gray-700 mb-6">{artwork.description}</p>
-          <p className="text-gray-700">Location: {artwork.owner}</p>
+          <p className="text-gray-700 mb-6 text-justify">{artwork.description}</p>
+          <p className="text-gray-700 text-justify">Location: {artwork.owner}</p>
         </div>
       </section>
     </main>
