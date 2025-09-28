@@ -8,10 +8,10 @@ interface ArtistCardProps {
 
 export default function ArtistCard({ artist }: ArtistCardProps) {
   return (
-    <div key={artist.id} className="artist-card bg-white shadow-md mb-6">
+    <div className="artist-card bg-white shadow-md mb-6">
       {artist.portrait && (
         <Image
-          className="w-full object-cover aspect-3/4 w-full overflow-hidden"
+          className="w-full object-cover w-full overflow-hidden"
           src={artist.portrait.url}
           alt={artist.name}
           width={200}

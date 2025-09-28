@@ -73,6 +73,13 @@ footer {
   break-inside: avoid-column;
   page-break-inside: avoid;
 }
+.artist-card img {
+  aspect-ratio: 3 / 4
+}
+.artists-list {
+    column-gap: 4rem;
+    row-gap: 2rem;
+}
 
 .artwork-wrapper {
   .artwork-display {

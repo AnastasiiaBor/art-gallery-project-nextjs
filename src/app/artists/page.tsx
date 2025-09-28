@@ -16,7 +16,7 @@ export default function ArtistsPage() {
       </section>
       <hr className="w-1/2 mx-auto" />
       <section className="container py-64">
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
+        <div className="artists-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {artistsList.map((artist: Artist) => (
             <ArtistCard key={artist.id} artist={artist} />
           ))}
